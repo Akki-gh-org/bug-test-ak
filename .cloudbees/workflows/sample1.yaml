@@ -1,6 +1,6 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: Hello World Workflow
+name: hello-world-workflow
 
 on:
   push:
@@ -10,7 +10,6 @@ on:
 jobs:
   hello-world-job:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -20,7 +19,6 @@ jobs:
 
   hello-akki-job:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
