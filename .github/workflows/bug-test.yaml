@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "Pusher: ${{ github.event.pusher.name }}"
   Job-two:
-    name: Job / two
+    name: Job/two
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The workflow definition resides in main"         
