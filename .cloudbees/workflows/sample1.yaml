@@ -2,10 +2,10 @@ name: Bug-test
 kind: workflow
 apiVersion: automation.cloudbees.io/v1alpha1
 
-on:
-  push:
-    branches:
-      - 'main'
+# on:
+#   push:
+#     branches:
+#       - 'main'
 
 jobs:
   job-1:
