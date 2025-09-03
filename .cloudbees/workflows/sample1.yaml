@@ -15,7 +15,9 @@ jobs:
         with:
           content: "name:Akashsami, Age:26"
           format: "MARKDOWN"
-
+          
+  publishevidence/item:
+    steps:
       - name: Publish workflow evidence item
         uses: cloudbees-io/publish-evidence-item@v1
         with:
