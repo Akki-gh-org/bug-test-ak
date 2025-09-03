@@ -1,18 +1,23 @@
-apiVersion: automation.cloudbees.io/v1alpha1
+name: Bug-test
 kind: workflow
-name: hello-world-workflow
+apiVersion: automation.cloudbees.io/v1alpha1
 
 on:
   push:
     branches:
-      - main
+      - 'main'
 
 jobs:
-  hello-world-job:
-    runs-on: ubuntu-latest
+  publish-evidence-item:
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Publish workflow evidence item
+        uses: cloudbees-io/publish-evidence-item@v1
+        with:
+          content: "name:Akashsami, Age:26"
+          format: "MARKDOWN"
 
-      - name: Print Hello World
-        run: echo "Hello World!"
+      - name: Publish workflow evidence item
+        uses: cloudbees-io/publish-evidence-item@v1
+        with:
+          content: "name:Akashsami, Age:26, evidence: 2"
+          format: "MARKDOWN"
